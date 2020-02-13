@@ -1,0 +1,11 @@
+image: maven:latest
+
+cache:
+    paths:
+    - .m2/repository/
+    - target/
+
+install:
+    stage: deploy
+    script:
+    - mvn clean install
